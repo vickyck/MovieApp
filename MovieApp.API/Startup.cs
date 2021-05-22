@@ -30,6 +30,7 @@ namespace MovieApp.API
                 opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
             services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +43,7 @@ namespace MovieApp.API
 
             // app.UseHttpsRedirection();
 
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());    
             app.UseRouting();
 
             app.UseAuthorization();
@@ -50,7 +52,8 @@ namespace MovieApp.API
             {
                 endpoints.MapControllers();
             });
-            app.UseStaticFiles();            
+            app.UseStaticFiles();     
+   
         }
     }
 }

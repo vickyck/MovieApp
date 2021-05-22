@@ -1,0 +1,54 @@
+<div class="container mt-8">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Testing</h1>
+        <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block" (click)="navigateHome()">View All Movies</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+            <div>
+              <strong>Title: </strong>
+              <p>{{movie.title}}</p>
+            </div>
+            <div>
+              <strong>IMDB ID: </strong>
+              <p>{{movie.imdbID}}</p>
+            </div>
+            <div>
+              <strong>IMDB Rating: </strong>
+              <p>{{movie.imdbRating}}</p>
+            </div>
+            <div>
+              <strong>Location: </strong>
+              <p>{{movie.location}}</p>
+            </div>
+            <div>
+                <strong>Language: </strong>
+                <p>{{movie.language}}</p>
+            </div>
+            <div>
+                <strong>Poster: </strong>
+                <p><img class="card-img-top img-thumbnail" src="{{movie.poster}}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-sm-8">
+        <div class="tab-panel">
+          <tabset class="member-tabset">
+            <tab heading="SoundEffects">
+                <h4>SoundEffects</h4>
+                
+              </tab>  
+              <tab heading="Stills">
+                <h4>Stills</h4>
+                <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+              </tab>       
+          </tabset>
+        </div>
+      </div> -->
+    </div>
+  </div>
