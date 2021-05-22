@@ -16,7 +16,7 @@
           <tbody>
             <tr *ngFor="let movie of movieList">
               <td>
-                <a class="nav-link" [routerLink]="['/movie']">{{movie.title}}</a>                
+                <a class="nav-link" [routerLink]="['/movie', movie]">{{movie.title}}</a>                
               </td>
               <td>{{ movie.language }}</td>
               <td>{{ movie.location }}</td>

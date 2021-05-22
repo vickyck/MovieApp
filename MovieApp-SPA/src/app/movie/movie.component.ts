@@ -20,7 +20,9 @@ export class MovieComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    //this.movie = this.router.getCurrentNavigation().movieData;
+    this.route.params.subscribe(params => {
+      this.movie = params;
+  });
 
     console.log('Movie value: ',this.movie);
     
