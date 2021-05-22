@@ -26,6 +26,6 @@ export class MovielistComponent implements OnInit {
   }
 
   redirectMovie(data: any) {
-    this.router.navigate(['/movie', {data}]);    
+    this.router.navigate(['/movie', {movieData: data}]);    
   }
 }
